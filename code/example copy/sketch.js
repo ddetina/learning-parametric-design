@@ -3,9 +3,10 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(400, 400);
+  pixelDensity(1);
+  createCanvas(600, 400);
 }
 
 function draw() {
-  background(100);
+  point(100,100);
 }
