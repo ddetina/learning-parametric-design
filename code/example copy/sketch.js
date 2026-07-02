@@ -1,3 +1,6 @@
+
+let myColors = ['#78FAD6', '#95FCFA', '#FAFC01', '#01FAFC'];
+
 function preload(){
   // preload assets
 }
@@ -5,18 +8,22 @@ function preload(){
 function setup() {
   // pixelDensity(4);
   createCanvas(640, 400);
+  background(0);
 }
 
 function draw() {
  
   strokeWeight(3);
-  stroke(255,0,0,20);
-  fill(255,0,0, 10);
-  arc(random(0,300),random(0,300),
+  let icolor = color(random(myColors));
+  icolor.setAlpha(20);
+  stroke(icolor);
+  fill(icolor);
+
+  arc(random(0,600),random(0,400),
     150,150,
     random(0,TWO_PI),random(0,TWO_PI),
     PIE);
-  if(frameCount>50){
+  if(frameCount>100){
     NoColorSpace();
   }
 }
